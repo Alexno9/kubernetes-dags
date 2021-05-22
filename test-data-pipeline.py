@@ -6,9 +6,9 @@ from airflow.operators.bash import BashOperator
 
 # [START default_args]
 default_args = {
-    'owner': 'luan moreno m. maciel',
+    'owner': 'Alex Augusto C.',
     'depends_on_past': False,
-    'email': ['luan.moreno@owshq.com'],
+    'email': ['alexno999@gmail.com'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -19,7 +19,7 @@ default_args = {
 dag = DAG(
     'test-data-pipeline',
     default_args=default_args,
-    start_date=datetime(2021, 3, 18),
+    start_date=datetime(2021, 5, 22),
     schedule_interval='@weekly',
     tags=['test', 'development', 'bash'])
 # [END instantiate_dag]
