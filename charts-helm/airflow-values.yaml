@@ -376,10 +376,13 @@ worker:
   ##
   extraVolumeMounts:
   ## Add extra volumes
-  ##
+    name: requirements
+    mountPath: /bitnami/python/
   extraVolumes:
   ## Add extra environment variables
-  ##
+    name: requirements
+    configMap:
+      name: requirements
   extraEnvVars:
   ## ConfigMap with extra environment variables
   ##
@@ -581,7 +584,7 @@ git:
       - repository: https://github.com/Alexno9/kubernetes-dags.git
         branch: master
         name: github
-        path:
+        path: https://github.com/Alexno9/kubernetes-dags/tree/main/dags
   plugins:
     ## Enable in order to download Plugins files from git repositories.
     ##
@@ -753,7 +756,7 @@ service:
 ingress:
   ## Set to true to enable ingress record generation
   ##
-  enabled: false
+  enabled: true
 
   ## Override API Version (automatically detected if not set)
   ##
