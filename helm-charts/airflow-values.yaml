@@ -376,13 +376,13 @@ worker:
   ##
   extraVolumeMounts:
   ## Add extra volumes
-    - name: requirements
-      mountPath: /bitnami/python/
+  ##  - name: requirements
+  ##    mountPath: /bitnami/python/
   extraVolumes:
   ## Add extra environment variables
-    - name: requirements
-      configMap:
-        name: requirements
+  ##  - name: requirements
+  ##    configMap:
+  ##      name: requirements
   extraEnvVars:
   ## ConfigMap with extra environment variables
   ##
@@ -445,7 +445,7 @@ worker:
     ##
     replicas:
       min: 1
-      max: 3
+      max: 4
     ## Define the target to trigger the scaling actions (utilization percentage)
     ##
     targets:
@@ -581,10 +581,10 @@ git:
     ##
     enabled: true
     repositories:
-      - repository: https://Alexno9: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@github.com/Alexno9/kubernetes-dags
+      - repository: https://Alexno9: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@github.com/Alexno9/kubernetes-dags.git
         branch: main
         name: my-dags
-        path:
+        path: dags
   plugins:
     ## Enable in order to download Plugins files from git repositories.
     ##
