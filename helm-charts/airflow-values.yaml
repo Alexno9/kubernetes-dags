@@ -376,13 +376,13 @@ worker:
   ##
   extraVolumeMounts:
   ## Add extra volumes
-  ##  - name: requirements
-  ##    mountPath: /bitnami/python/
+    - name: requirements
+      mountPath: /bitnami/python/
   extraVolumes:
   ## Add extra environment variables
-  ##  - name: requirements
-  ##    configMap:
-  ##      name: requirements
+    - name: requirements
+      configMap:
+        name: requirements
   extraEnvVars:
   ## ConfigMap with extra environment variables
   ##
